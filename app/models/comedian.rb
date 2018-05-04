@@ -4,4 +4,8 @@ class Comedian < ActiveRecord::Base
   validates :age, presence: true
 
   has_many :specials
+
+  def self.average_age
+    average(:age)
+  end
 end

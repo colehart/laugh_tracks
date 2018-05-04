@@ -14,4 +14,9 @@ RSpec.describe Comedian do
       end
     end
   end
+
+  describe 'class_methods' do
+    it 'average_age' do
+    end
+  end
 end
