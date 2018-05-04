@@ -3,13 +3,12 @@ RSpec.describe 'Visitors' do
     comedian_name = 'Bill Murray'
     comedian = Comedian.create(name: comedian_name, age: 20)
 
-    special_name = 'Another Funny White Guy'
-    comedian_id = 1
+    special = Special.create(name: 'Another Funny White Guy', comedian_id: 1)
 
     visit('/comedians')
 
     expect(page).to have_content(comedian_name)
     expect(page).to have_content(comedian.age)
-    expect(page).to have_content(special_name)
+    expect(page).to have_content(special.name)
   end
 end

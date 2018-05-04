@@ -2,7 +2,7 @@
 
 <% @comedians.each do |comedian| %>
   <ul>
-    <h3><%= comedian.name %></h3>
-    <p>Age: <%= comedian.age %></p>
+    <li><%= comedian.name %>, Age: <%= comedian.age %></li>
+    <li><%= @specials.each(&:name) %></li>
   </ul>
 <% end %>
